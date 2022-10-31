@@ -33,3 +33,23 @@ function buildTower(num){
 console.log(buildTower(3))
 console.log(buildTower(6))
 
+
+
+//ben's solution: 
+
+function towerBuilder(floors){
+    let floor = floors
+    let arr = [];
+    let stars = "*"
+    
+    for(let i=0; i<floors; i++){
+      let spaces = " ".repeat(floor -1)
+      arr[i] = `${spaces}${stars}${spaces}`
+      floor--
+      stars += "**"
+    }
+  
+    console.log(arr)
+  }
+  
+  towerBuilder(10)
